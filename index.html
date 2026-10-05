@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spa Bella Vita — Saúde e Beleza em Fraiburgo, SC</title>
+  <meta name="description" content="Spa Bella Vita em Fraiburgo - SC: cuidados capilares, estética facial, massoterapia e spa relaxante. Reserve seu momento de autocuidado, bem-estar e renovação pelo WhatsApp." />
+  <meta name="theme-color" content="#10B981" />
+  <link rel="canonical" href="https://ryan863.github.io/spa-bella-vita/" />
+  <link rel="icon" type="image/png" href="assets/butterfly.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Spa Bella Vita — Saúde e Beleza" />
+  <meta property="og:description" content="Autocuidado, bem-estar e renovação em Fraiburgo - SC. Agende pelo WhatsApp." />
+  <meta property="og:image" content="assets/logo.png" />
+
+  <!-- Habilita estado inicial das animações só se JS ativo e sem reduced-motion -->
+  <script>
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('anim');
+    }
+  </script>
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS (CDN) + tokens da marca -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            emerald: { DEFAULT: '#10B981', deep: '#059669', ink: '#047857' },
+            mint: '#2DD4BF',
+            lime: { DEFAULT: '#84CC16', soft: '#A3E635', pale: '#BEF264' },
+            leaf: '#4ADE80',
+            forest: '#0F3D33',
+            ink: '#1E293B',
+            slate: { DEFAULT: '#64748B' },
+            off: '#F8FAFC'
+          },
+          borderRadius: { '4xl': '2rem' }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Dados estruturados (SEO local) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "spa bella vita - Saúde e beleza",
+    "image": "assets/logo.png",
+    "telephone": "+55-49-99133-1919",
+    "email": "spa_bellavita@hotmail.com",
+    "url": "https://ryan863.github.io/spa-bella-vita/",
+    "sameAs": ["https://www.instagram.com/spa.bellavita.saudeebeleza/"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenida Carlos Maister, 146",
+      "addressLocality": "Fraiburgo",
+      "addressRegion": "SC",
+      "postalCode": "89580-000",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "13:30", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "08:30", "closes": "11:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "13:30", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00" }
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-white text-ink antialiased overflow-x-hidden">
+
+  <!-- Sprite de ícones (SVG inline, sem emojis como ícones) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.52.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.709.3 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.696.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="7" y2="7"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="17" y2="17"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+      <symbol id="i-scissors" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></symbol>
+      <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></symbol>
+    </defs>
+  </svg>
+
+  <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:text-forest focus:px-4 focus:py-2 focus:rounded-full focus:shadow-lg">Pular para o conteúdo</a>
+
+  <!-- ====================== HEADER / NAVBAR ====================== -->
+  <header class="site-header fixed inset-x-0 top-0 z-50 px-4 pt-4" id="topo">
+    <div class="nav-shell glass mx-auto flex max-w-6xl items-center justify-between rounded-full py-2 pl-4 pr-2 transition-all duration-300 sm:pl-5">
+      <a href="#inicio" class="flex items-center gap-2" aria-label="Spa Bella Vita — voltar ao início">
+        <img src="assets/logo.png" alt="Logo Spa Bella Vita - Saúde e beleza" width="416" height="212" class="h-11 w-auto sm:h-12" id="logo-img"
+             onerror="this.style.display='none'; document.getElementById('logo-fallback').classList.remove('hidden');" />
+        <span id="logo-fallback" class="hidden leading-none">
+          <span class="block text-[0.65rem] font-medium uppercase tracking-[0.3em] text-slate">spa</span>
+          <span class="text-gradient block text-xl font-bold lowercase">bella vita</span>
+          <span class="block text-[0.6rem] tracking-[0.25em] text-slate">Saúde e beleza</span>
+        </span>
+      </a>
+
+      <nav aria-label="Navegação principal" class="hidden items-center gap-8 text-sm font-medium text-slate lg:flex">
+        <a class="nav-link" href="#inicio">Início</a>
+        <a class="nav-link" href="#tratamentos">Tratamentos</a>
+        <a class="nav-link" href="#horarios">Horários</a>
+        <a class="nav-link" href="#endereco">Endereço</a>
+        <a class="nav-link" href="#contato">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="https://api.whatsapp.com/send?phone=5549991331919" target="_blank" rel="noopener noreferrer"
+           class="btn btn-lime px-4 py-2.5 text-sm sm:px-5" id="nav-cta-whatsapp">
+          <svg class="ico ico-fill h-4 w-4" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          <span>Agendar<span class="hidden sm:inline"> agora</span></span>
+        </a>
+        <button type="button" id="menu-toggle" class="grid h-11 w-11 place-items-center rounded-full text-ink transition hover:bg-emerald/10 lg:hidden"
+                aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menu">
+          <svg class="ico h-6 w-6" aria-hidden="true" id="menu-icon-open"><use href="#i-menu"/></svg>
+          <svg class="ico hidden h-6 w-6" aria-hidden="true" id="menu-icon-close"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="mobile-panel mx-auto mt-2 max-w-6xl lg:hidden" aria-hidden="true">
+      <div>
+        <nav aria-label="Navegação mobile" class="glass flex flex-col rounded-3xl p-3 text-base font-medium">
+          <a class="rounded-2xl px-4 py-3 hover:bg-emerald/10" href="#inicio">Início</a>
+          <a class="rounded-2xl px-4 py-3 hover:bg-emerald/10" href="#tratamentos">Tratamentos</a>
+          <a class="rounded-2xl px-4 py-3 hover:bg-emerald/10" href="#horarios">Horários</a>
+          <a class="rounded-2xl px-4 py-3 hover:bg-emerald/10" href="#endereco">Endereço</a>
+          <a class="rounded-2xl px-4 py-3 hover:bg-emerald/10" href="#contato">Contato</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ====================== HERO ====================== -->
+    <section id="inicio" class="hero-bg relative isolate overflow-hidden pb-16 pt-32 sm:pt-40 lg:pb-20" aria-labelledby="hero-title">
+      <div class="dot-grid absolute inset-0 -z-10" aria-hidden="true"></div>
+      <div class="glow-blob absolute -left-24 top-10 -z-10 h-72 w-72 bg-lime-soft/40" data-float="blob" aria-hidden="true"></div>
+      <div class="glow-blob absolute -right-20 top-40 -z-10 h-80 w-80 bg-mint/25" data-float="blob" aria-hidden="true"></div>
+
+      <!-- Borboletas orgânicas -->
+      <img src="assets/butterfly.png" alt="" aria-hidden="true" width="130" height="90"
+           class="butterfly pointer-events-none absolute right-[6%] top-36 hidden w-28 rotate-12 opacity-90 md:block lg:right-[12%] lg:w-36" data-float="butterfly" />
+      <img src="assets/butterfly.png" alt="" aria-hidden="true" width="130" height="90"
+           class="butterfly pointer-events-none absolute left-[5%] top-[19rem] hidden w-16 -rotate-12 opacity-60 lg:block" data-float="butterfly-small" />
+
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="mx-auto max-w-4xl text-center">
+          <span data-hero class="chip mb-6 !border-emerald/30 !bg-white/80 text-emerald-ink">
+            <svg class="ico h-4 w-4" aria-hidden="true"><use href="#i-leaf"/></svg>
+            Saúde e beleza em Fraiburgo - SC
+          </span>
+
+          <h1 id="hero-title" data-hero class="text-4xl font-semibold leading-[1.12] tracking-tight text-ink sm:text-5xl lg:text-[3.6rem]">
+            Seu momento de <span class="italic-accent text-gradient">autocuidado</span>,
+            bem-estar e <span class="italic-accent text-gradient">renovação</span>
+          </h1>
+
+          <p data-hero class="mx-auto mt-6 max-w-xl text-base leading-relaxed text-slate sm:text-lg">
+            Desacelere, respire fundo e deixe a gente cuidar de você. No Spa Bella Vita, cada atendimento é pensado para
+            renovar o corpo, a pele e a energia.
+          </p>
+
+          <div data-hero class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a href="https://api.whatsapp.com/send?phone=5549991331919" target="_blank" rel="noopener noreferrer"
+               class="btn btn-lime w-full px-7 py-3.5 text-base sm:w-auto" id="hero-cta-whatsapp">
+              <svg class="ico ico-fill h-5 w-5" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Agendar pelo WhatsApp
+            </a>
+            <a href="https://www.instagram.com/spa.bellavita.saudeebeleza/" target="_blank" rel="noopener noreferrer"
+               class="btn btn-ghost w-full px-7 py-3.5 text-base sm:w-auto" id="hero-cta-instagram">
+              <svg class="ico h-5 w-5" aria-hidden="true"><use href="#i-instagram"/></svg>
+              Conhecer no Instagram
+            </a>
+          </div>
+
+          <ul data-hero class="mt-8 flex flex-wrap items-center justify-center gap-2" aria-label="Áreas de atuação">
+            <li class="chip">Cuidados Capilares</li>
+            <li class="chip">Estética Facial</li>
+            <li class="chip">Massoterapia</li>
+            <li class="chip">Spa Relaxante</li>
+          </ul>
+        </div>
+
+        <!-- 3 cards de destaque (inspirados na referência) -->
+        <div class="focus-group mx-auto mt-14 grid max-w-5xl gap-4 md:grid-cols-3">
+          <article data-hero class="card glass rounded-3xl p-5">
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2.5">
+                <svg class="ico h-5 w-5 text-forest" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                <h2 class="text-sm font-semibold">Agendamento direto</h2>
+              </div>
+              <span class="tag-badge">Rápido</span>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-slate">Fale com a equipe pelo WhatsApp e reserve o seu horário sem complicação.</p>
+          </article>
+
+          <article data-hero class="card glass rounded-3xl p-5">
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2.5">
+                <svg class="ico h-5 w-5 text-forest" aria-hidden="true"><use href="#i-clock"/></svg>
+                <h2 class="text-sm font-semibold">Atendimento</h2>
+              </div>
+              <span class="status-pill rounded-full px-2.5 py-0.5 text-[0.7rem] font-bold" data-status-label data-state="unknown">Verificando…</span>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-slate" data-status-detail>De segunda a sábado, em horários especiais.</p>
+          </article>
+
+          <article data-hero class="card glass rounded-3xl p-5">
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2.5">
+                <svg class="ico h-5 w-5 text-forest" aria-hidden="true"><use href="#i-pin"/></svg>
+                <h2 class="text-sm font-semibold">Localização</h2>
+              </div>
+              <span class="tag-badge">Fraiburgo</span>
+            </div>
+            <p class="mt-3 text-sm leading-relaxed text-slate">Avenida Carlos Maister, 146 — fácil de chegar, fácil de relaxar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== TRATAMENTOS ====================== -->
+    <section id="tratamentos" class="relative bg-white py-20 lg:py-28" aria-labelledby="tratamentos-title">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="grid items-end gap-6 lg:grid-cols-2 lg:gap-16" data-reveal>
+          <div>
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-ink">Tratamentos</p>
+            <h2 id="tratamentos-title" class="text-3xl font-medium leading-tight tracking-tight sm:text-4xl">
+              Cuidado completo para <span class="italic-accent text-gradient">corpo, pele</span> e mente
+            </h2>
+          </div>
+          <p class="text-base leading-relaxed text-slate lg:text-lg">
+            Reunimos saúde e beleza em um só lugar. Conheça as áreas de atendimento e escolha o ritual ideal para o seu momento.
+          </p>
+        </div>
+
+        <div class="focus-group mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <article class="card group flex flex-col rounded-3xl p-6" data-reveal>
+            <span class="icon-tile grid h-12 w-12 place-items-center rounded-2xl">
+              <svg class="ico h-6 w-6" aria-hidden="true"><use href="#i-scissors"/></svg>
+            </span>
+            <h3 class="mt-5 text-lg font-semibold">Cuidados Capilares</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-slate">Corte, coloração e tratamentos que devolvem brilho, maciez e vitalidade aos seus fios.</p>
+            <ul class="mt-4 flex flex-wrap gap-1.5" aria-label="Destaques">
+              <li class="chip !py-1 !text-xs">Corte</li><li class="chip !py-1 !text-xs">Coloração</li><li class="chip !py-1 !text-xs">Hidratação</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=5549991331919&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Cuidados%20Capilares." target="_blank" rel="noopener noreferrer"
+               class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-ink transition-all hover:gap-2.5" aria-label="Agendar Cuidados Capilares pelo WhatsApp">
+              Agendar <svg class="ico h-4 w-4" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="card group flex flex-col rounded-3xl p-6" data-reveal>
+            <span class="icon-tile grid h-12 w-12 place-items-center rounded-2xl">
+              <svg class="ico h-6 w-6" aria-hidden="true"><use href="#i-sparkles"/></svg>
+            </span>
+            <h3 class="mt-5 text-lg font-semibold">Estética Facial</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-slate">Limpeza, hidratação e protocolos de skincare para uma pele luminosa, equilibrada e saudável.</p>
+            <ul class="mt-4 flex flex-wrap gap-1.5" aria-label="Destaques">
+              <li class="chip !py-1 !text-xs">Limpeza de pele</li><li class="chip !py-1 !text-xs">Skincare</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=5549991331919&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Est%C3%A9tica%20Facial." target="_blank" rel="noopener noreferrer"
+               class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-ink transition-all hover:gap-2.5" aria-label="Agendar Estética Facial pelo WhatsApp">
+              Agendar <svg class="ico h-4 w-4" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="card group flex flex-col rounded-3xl p-6" data-reveal>
+            <span class="icon-tile grid h-12 w-12 place-items-center rounded-2xl">
+              <svg class="ico h-6 w-6" aria-hidden="true"><use href="#i-leaf"/></svg>
+            </span>
+            <h3 class="mt-5 text-lg font-semibold">Massoterapia &amp; Spa Relaxante</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-slate">Massagens e rituais de relaxamento que aliviam tensões e acalmam a mente.</p>
+            <ul class="mt-4 flex flex-wrap gap-1.5" aria-label="Destaques">
+              <li class="chip !py-1 !text-xs">Relaxamento</li><li class="chip !py-1 !text-xs">Alívio de tensão</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=5549991331919&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Massoterapia%20%2F%20Spa%20Relaxante." target="_blank" rel="noopener noreferrer"
+               class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-ink transition-all hover:gap-2.5" aria-label="Agendar Massoterapia e Spa Relaxante pelo WhatsApp">
+              Agendar <svg class="ico h-4 w-4" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+
+          <article class="card group flex flex-col rounded-3xl p-6" data-reveal>
+            <span class="icon-tile grid h-12 w-12 place-items-center rounded-2xl">
+              <svg class="ico h-6 w-6" aria-hidden="true"><use href="#i-heart"/></svg>
+            </span>
+            <h3 class="mt-5 text-lg font-semibold">Saúde &amp; Estética Integrada</h3>
+            <p class="mt-2 flex-1 text-sm leading-relaxed text-slate">Protocolos personalizados que unem cuidado corporal, bem-estar e autoestima.</p>
+            <ul class="mt-4 flex flex-wrap gap-1.5" aria-label="Destaques">
+              <li class="chip !py-1 !text-xs">Corporal</li><li class="chip !py-1 !text-xs">Personalizado</li>
+            </ul>
+            <a href="https://api.whatsapp.com/send?phone=5549991331919&text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Sa%C3%BAde%20%26%20Est%C3%A9tica%20Integrada." target="_blank" rel="noopener noreferrer"
+               class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-ink transition-all hover:gap-2.5" aria-label="Agendar Saúde e Estética Integrada pelo WhatsApp">
+              Agendar <svg class="ico h-4 w-4" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </article>
+        </div>
+
+        <p class="mt-8 text-center text-sm text-slate" data-reveal>
+          Quer saber quais procedimentos estão disponíveis? <a class="font-semibold text-emerald-ink underline decoration-lime/60 underline-offset-4 hover:decoration-emerald" href="https://api.whatsapp.com/send?phone=5549991331919" target="_blank" rel="noopener noreferrer">Fale com a gente pelo WhatsApp</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================== EXPERIÊNCIA ====================== -->
+    <section class="bg-off py-20 lg:py-24" aria-labelledby="exp-title">
+      <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-2 lg:gap-16">
+        <!-- Painel visual -->
+        <div class="relative overflow-hidden rounded-4xl bg-gradient-to-br from-lime-pale/70 via-leaf/20 to-mint/25 p-6 sm:p-10" data-reveal>
+          <div class="glow-blob absolute -right-10 -top-10 h-48 w-48 bg-lime-soft/50" data-float="blob" aria-hidden="true"></div>
+          <img src="assets/butterfly.png" alt="" aria-hidden="true" width="130" height="90" class="butterfly absolute right-6 top-5 w-20 rotate-6 opacity-90" data-float="butterfly-small" />
+
+          <div class="glass relative mt-14 rounded-3xl p-5 sm:p-6">
+            <p class="text-xs font-semibold uppercase tracking-wider text-slate">Seu momento Bella Vita</p>
+            <div class="mt-4 flex items-start gap-4">
+              <span class="icon-tile grid h-12 w-12 shrink-0 place-items-center rounded-2xl">
+                <svg class="ico h-6 w-6" aria-hidden="true"><use href="#i-calendar"/></svg>
+              </span>
+              <div>
+                <p class="font-semibold">Escolha o tratamento ideal</p>
+                <p class="mt-1 text-sm text-slate">Chame no WhatsApp, combine o melhor dia e horário e pronto.</p>
+              </div>
+            </div>
+            <ol class="mt-5 space-y-3 text-sm">
+              <li class="flex items-center gap-3 rounded-2xl bg-white/80 px-4 py-3"><span class="grid h-6 w-6 place-items-center rounded-full bg-forest text-xs font-bold text-lime-pale">1</span> Envie uma mensagem</li>
+              <li class="flex items-center gap-3 rounded-2xl bg-white/80 px-4 py-3"><span class="grid h-6 w-6 place-items-center rounded-full bg-forest text-xs font-bold text-lime-pale">2</span> Defina data e horário</li>
+              <li class="flex items-center gap-3 rounded-2xl bg-white/80 px-4 py-3"><span class="grid h-6 w-6 place-items-center rounded-full bg-forest text-xs font-bold text-lime-pale">3</span> Relaxe e aproveite</li>
+            </ol>
+            <a href="https://api.whatsapp.com/send?phone=5549991331919" target="_blank" rel="noopener noreferrer" class="btn btn-lime mt-5 w-full px-6 py-3 text-sm" id="exp-cta-whatsapp">
+              <svg class="ico ico-fill h-4 w-4" aria-hidden="true"><use href="#i-whatsapp"/></svg> Confirmar pelo WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-ink" data-reveal>Experiência Bella Vita</p>
+          <h2 id="exp-title" class="text-3xl font-medium leading-tight tracking-tight sm:text-4xl" data-reveal>
+            Um espaço feito para <span class="italic-accent text-gradient">desacelerar</span> e se reconectar
+          </h2>
+          <p class="mt-5 text-base leading-relaxed text-slate lg:text-lg" data-reveal>
+            Mais do que um salão, o Spa Bella Vita é um refúgio de saúde e beleza onde você é recebida com atenção,
+            carinho e cuidado em cada detalhe.
+          </p>
+          <ul class="mt-7 grid gap-3 sm:grid-cols-2" data-reveal aria-label="Diferenciais">
+            <li class="chip !justify-start !rounded-2xl !px-4 !py-3 !text-sm"><svg class="ico h-5 w-5 text-emerald-deep" aria-hidden="true"><use href="#i-check"/></svg> Atendimento personalizado</li>
+            <li class="chip !justify-start !rounded-2xl !px-4 !py-3 !text-sm"><svg class="ico h-5 w-5 text-emerald-deep" aria-hidden="true"><use href="#i-check"/></svg> Ambiente acolhedor</li>
+            <li class="chip !justify-start !rounded-2xl !px-4 !py-3 !text-sm"><svg class="ico h-5 w-5 text-emerald-deep" aria-hidden="true"><use href="#i-check"/></svg> Cuidado integral</li>
+            <li class="chip !justify-start !rounded-2xl !px-4 !py-3 !text-sm"><svg class="ico h-5 w-5 text-emerald-deep" aria-hidden="true"><use href="#i-check"/></svg> Foco em bem-estar</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== HORÁRIOS ====================== -->
+    <section id="horarios" class="bg-white py-20 lg:py-28" aria-labelledby="horarios-title">
+      <div class="mx-auto grid max-w-6xl items-start gap-10 px-5 lg:grid-cols-5 lg:gap-14">
+        <div class="lg:col-span-2" data-reveal>
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-ink">Horários</p>
+          <h2 id="horarios-title" class="text-3xl font-medium leading-tight tracking-tight sm:text-4xl">
+            Quando você pode <span class="italic-accent text-gradient">nos visitar</span>
+          </h2>
+          <p class="mt-5 text-base leading-relaxed text-slate">
+            Funcionamos de segunda a sábado. Confira os turnos e veja em tempo real se estamos atendendo agora.
+          </p>
+
+          <div class="status-pill mt-7 inline-flex items-center gap-3 rounded-full px-5 py-3 text-base font-bold" data-status-label data-state="unknown" role="status" aria-live="polite" id="status-badge">
+            Verificando…
+          </div>
+          <p class="mt-3 text-sm text-slate" data-status-detail aria-live="polite"></p>
+          <p class="mt-1 text-xs text-slate/80">Horário de Brasília.</p>
+        </div>
+
+        <div class="card overflow-hidden rounded-4xl lg:col-span-3" data-reveal>
+          <div class="flex items-center gap-3 border-b border-[#e6efe9] bg-gradient-to-r from-lime-pale/40 to-mint/10 px-6 py-4">
+            <svg class="ico h-5 w-5 text-forest" aria-hidden="true"><use href="#i-clock"/></svg>
+            <h3 class="font-semibold">Horário de funcionamento</h3>
+          </div>
+          <ul id="hours-list" class="divide-y divide-[#eef3f0]">
+            <li class="hours-row flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-6 py-4" data-day="1">
+              <span class="flex items-center gap-2 font-medium">Segunda-feira <span class="today-tag tag-badge">Hoje</span></span>
+              <span class="text-sm text-slate">13:30 – 20:00</span>
+            </li>
+            <li class="hours-row flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-6 py-4" data-day="2">
+              <span class="flex items-center gap-2 font-medium">Terça-feira <span class="today-tag tag-badge">Hoje</span></span>
+              <span class="text-sm text-slate">08:30 – 11:00 <span class="mx-1 text-emerald">|</span> 13:30 – 19:00</span>
+            </li>
+            <li class="hours-row flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-6 py-4" data-day="3">
+              <span class="flex items-center gap-2 font-medium">Quarta-feira <span class="today-tag tag-badge">Hoje</span></span>
+              <span class="text-sm text-slate">08:30 – 11:00 <span class="mx-1 text-emerald">|</span> 13:30 – 19:00</span>
+            </li>
+            <li class="hours-row flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-6 py-4" data-day="4">
+              <span class="flex items-center gap-2 font-medium">Quinta-feira <span class="today-tag tag-badge">Hoje</span></span>
+              <span class="text-sm text-slate">08:30 – 11:00 <span class="mx-1 text-emerald">|</span> 13:30 – 19:00</span>
+            </li>
+            <li class="hours-row flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-6 py-4" data-day="5">
+              <span class="flex items-center gap-2 font-medium">Sexta-feira <span class="today-tag tag-badge">Hoje</span></span>
+              <span class="text-sm text-slate">08:30 – 11:00 <span class="mx-1 text-emerald">|</span> 13:30 – 19:00</span>
+            </li>
+            <li class="hours-row flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-6 py-4" data-day="6">
+              <span class="flex items-center gap-2 font-medium">Sábado <span class="today-tag tag-badge">Hoje</span></span>
+              <span class="text-sm text-slate">08:00 – 12:00</span>
+            </li>
+            <li class="hours-row flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-6 py-4" data-day="0">
+              <span class="flex items-center gap-2 font-medium">Domingo <span class="today-tag tag-badge">Hoje</span></span>
+              <span class="text-sm font-medium text-slate">Fechado</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== ENDEREÇO ====================== -->
+    <section id="endereco" class="bg-off py-20 lg:py-24" aria-labelledby="endereco-title">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="grid items-end gap-6 lg:grid-cols-2 lg:gap-16" data-reveal>
+          <div>
+            <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-ink">Endereço</p>
+            <h2 id="endereco-title" class="text-3xl font-medium leading-tight tracking-tight sm:text-4xl">
+              Venha <span class="italic-accent text-gradient">nos conhecer</span>
+            </h2>
+          </div>
+          <p class="text-base leading-relaxed text-slate lg:text-lg">Estamos no coração de Fraiburgo, prontos para receber você com todo o carinho.</p>
+        </div>
+
+        <div class="mt-10 grid gap-5 lg:grid-cols-5">
+          <div class="card map-frame overflow-hidden rounded-4xl lg:col-span-3" data-reveal>
+            <iframe title="Mapa: Spa Bella Vita, Avenida Carlos Maister 146, Fraiburgo - SC" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                    class="block h-72 w-full border-0 sm:h-96 lg:h-full lg:min-h-[26rem]"
+                    src="https://maps.google.com/maps?q=Avenida%20Carlos%20Maister%2C%20146%2C%20Fraiburgo%20-%20SC%2C%2089580-000&z=16&output=embed"></iframe>
+          </div>
+
+          <div class="card flex flex-col justify-between rounded-4xl p-7 lg:col-span-2" data-reveal>
+            <div>
+              <span class="icon-tile grid h-12 w-12 place-items-center rounded-2xl">
+                <svg class="ico h-6 w-6" aria-hidden="true"><use href="#i-pin"/></svg>
+              </span>
+              <h3 class="mt-5 text-xl font-semibold">spa bella vita</h3>
+              <address class="mt-2 not-italic leading-relaxed text-slate">
+                Avenida Carlos Maister, 146<br />
+                Fraiburgo - SC<br />
+                CEP 89580-000
+              </address>
+            </div>
+            <div class="mt-7 flex flex-col gap-3">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Avenida+Carlos+Maister,+146,+Fraiburgo+-+SC,+89580-000" target="_blank" rel="noopener noreferrer"
+                 class="btn btn-forest px-6 py-3.5 text-sm" id="route-cta">
+                <svg class="ico h-4 w-4" aria-hidden="true"><use href="#i-arrow"/></svg> Traçar rota no Google Maps
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Carlos+Maister,+146,+Fraiburgo+-+SC,+89580-000" target="_blank" rel="noopener noreferrer"
+                 class="btn btn-ghost px-6 py-3.5 text-sm">
+                Abrir no mapa
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CONTATO / REDES ====================== -->
+    <section id="contato" class="bg-white py-20 lg:py-28" aria-labelledby="contato-title">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-emerald-ink">Contato</p>
+          <h2 id="contato-title" class="text-3xl font-medium leading-tight tracking-tight sm:text-4xl">
+            Fale com a <span class="italic-accent text-gradient">Bella Vita</span>
+          </h2>
+          <p class="mt-4 text-base leading-relaxed text-slate lg:text-lg">Escolha o canal que preferir — respondemos com carinho.</p>
+        </div>
+
+        <div class="mt-12 grid gap-5 lg:grid-cols-5">
+          <!-- Instagram em destaque -->
+          <a href="https://www.instagram.com/spa.bellavita.saudeebeleza/" target="_blank" rel="noopener noreferrer" id="social-instagram"
+             class="card group relative flex flex-col justify-between overflow-hidden rounded-4xl border-0 bg-gradient-to-br from-forest via-[#0e5f4a] to-emerald-ink p-8 text-white lg:col-span-3" data-reveal>
+            <div class="glow-blob absolute -right-10 -top-10 h-56 w-56 bg-lime-soft/35" data-float="blob" aria-hidden="true"></div>
+            <img src="assets/butterfly.png" alt="" aria-hidden="true" width="130" height="90" class="butterfly absolute bottom-6 right-6 w-24 opacity-90" data-float="butterfly-small" />
+            <div class="relative">
+              <span class="grid h-12 w-12 place-items-center rounded-2xl bg-white/15 backdrop-blur">
+                <svg class="ico h-6 w-6" aria-hidden="true"><use href="#i-instagram"/></svg>
+              </span>
+              <p class="mt-6 text-sm font-medium uppercase tracking-[0.18em] text-lime-pale">Instagram oficial</p>
+              <h3 class="mt-2 break-all text-2xl font-semibold sm:text-3xl">@spa.bellavita.saudeebeleza</h3>
+              <p class="mt-3 max-w-md text-sm leading-relaxed text-white/85">Acompanhe novidades, bastidores e inspirações de autocuidado, bem-estar e beleza.</p>
+            </div>
+            <span class="btn btn-lime relative mt-8 self-start px-6 py-3 text-sm">
+              Seguir no Instagram <svg class="ico h-4 w-4" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </span>
+          </a>
+
+          <div class="flex flex-col gap-5 lg:col-span-2">
+            <a href="https://api.whatsapp.com/send?phone=5549991331919" target="_blank" rel="noopener noreferrer" id="social-whatsapp"
+               class="card group flex flex-1 items-center gap-4 rounded-3xl p-6" data-reveal>
+              <span class="icon-tile grid h-12 w-12 shrink-0 place-items-center rounded-2xl">
+                <svg class="ico ico-fill h-6 w-6" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              </span>
+              <span class="min-w-0">
+                <span class="block text-sm text-slate">WhatsApp</span>
+                <span class="block text-lg font-semibold">(49) 99133-1919</span>
+                <span class="block text-xs font-medium text-emerald-ink">Iniciar conversa</span>
+              </span>
+              <svg class="ico ml-auto h-5 w-5 shrink-0 text-emerald-deep transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <a href="mailto:spa_bellavita@hotmail.com" id="social-email"
+               class="card group flex flex-1 items-center gap-4 rounded-3xl p-6" data-reveal>
+              <span class="icon-tile grid h-12 w-12 shrink-0 place-items-center rounded-2xl">
+                <svg class="ico h-6 w-6" aria-hidden="true"><use href="#i-mail"/></svg>
+              </span>
+              <span class="min-w-0">
+                <span class="block text-sm text-slate">E-mail</span>
+                <span class="block break-all text-base font-semibold sm:text-lg">spa_bellavita@hotmail.com</span>
+                <span class="block text-xs font-medium text-emerald-ink">Enviar mensagem</span>
+              </span>
+              <svg class="ico ml-auto h-5 w-5 shrink-0 text-emerald-deep transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== CTA FINAL ====================== -->
+    <section class="bg-white pb-20" aria-labelledby="cta-title">
+      <div class="mx-auto max-w-6xl px-5">
+        <div class="relative isolate overflow-hidden rounded-4xl bg-gradient-to-br from-lime-pale via-lime-soft/80 to-leaf px-6 py-14 text-center sm:px-12" data-reveal>
+          <div class="glow-blob absolute -left-10 -top-16 -z-10 h-64 w-64 bg-white/50" data-float="blob" aria-hidden="true"></div>
+          <img src="assets/butterfly.png" alt="" aria-hidden="true" width="130" height="90" class="butterfly absolute right-8 top-6 hidden w-24 rotate-12 opacity-80 sm:block" data-float="butterfly-small" />
+          <h2 id="cta-title" class="mx-auto max-w-2xl text-3xl font-semibold leading-tight text-forest sm:text-4xl">
+            Pronta para <span class="italic-accent">renovar</span> o seu bem-estar?
+          </h2>
+          <p class="mx-auto mt-4 max-w-lg text-forest/80">Reserve seu horário agora e viva um momento só seu.</p>
+          <a href="https://api.whatsapp.com/send?phone=5549991331919" target="_blank" rel="noopener noreferrer"
+             class="btn btn-forest mt-8 px-8 py-4 text-base" id="final-cta-whatsapp">
+            <svg class="ico ico-fill h-5 w-5" aria-hidden="true"><use href="#i-whatsapp"/></svg> Agendar pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== FOOTER ====================== -->
+  <footer class="border-t border-[#e6efe9] bg-off" id="rodape">
+    <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3">
+      <div>
+        <img src="assets/logo.png" alt="Spa Bella Vita - Saúde e beleza" width="416" height="212" class="h-16 w-auto" loading="lazy" />
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-slate">Saúde e beleza com carinho, em Fraiburgo - SC.</p>
+      </div>
+
+      <nav aria-label="Links institucionais">
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-ink">Navegue</h2>
+        <ul class="mt-4 space-y-2.5 text-sm text-slate">
+          <li><a class="transition hover:text-emerald-ink" href="#inicio">Início</a></li>
+          <li><a class="transition hover:text-emerald-ink" href="#tratamentos">Tratamentos</a></li>
+          <li><a class="transition hover:text-emerald-ink" href="#horarios">Horários</a></li>
+          <li><a class="transition hover:text-emerald-ink" href="#endereco">Endereço</a></li>
+          <li><a class="transition hover:text-emerald-ink" href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="text-sm font-semibold uppercase tracking-wider text-ink">Canais oficiais</h2>
+        <ul class="mt-4 space-y-2.5 text-sm text-slate">
+          <li><a class="transition hover:text-emerald-ink" href="https://api.whatsapp.com/send?phone=5549991331919" target="_blank" rel="noopener noreferrer">WhatsApp · (49) 99133-1919</a></li>
+          <li><a class="transition hover:text-emerald-ink" href="https://www.instagram.com/spa.bellavita.saudeebeleza/" target="_blank" rel="noopener noreferrer">Instagram · @spa.bellavita.saudeebeleza</a></li>
+          <li><a class="break-all transition hover:text-emerald-ink" href="mailto:spa_bellavita@hotmail.com">spa_bellavita@hotmail.com</a></li>
+          <li><a class="transition hover:text-emerald-ink" href="https://www.google.com/maps/dir/?api=1&destination=Avenida+Carlos+Maister,+146,+Fraiburgo+-+SC,+89580-000" target="_blank" rel="noopener noreferrer">Av. Carlos Maister, 146 · Fraiburgo - SC</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-[#e6efe9] py-5 text-center text-xs text-slate">
+      © <span id="year">2026</span> spa bella vita - Saúde e beleza. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <!-- Botão flutuante WhatsApp -->
+  <a href="https://api.whatsapp.com/send?phone=5549991331919" target="_blank" rel="noopener noreferrer" id="fab-whatsapp"
+     class="fab fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full text-white sm:bottom-7 sm:right-7 sm:h-16 sm:w-16"
+     aria-label="Falar pelo WhatsApp">
+    <svg class="ico ico-fill h-7 w-7 sm:h-8 sm:w-8" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <!-- GSAP 3 + ScrollTrigger (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
