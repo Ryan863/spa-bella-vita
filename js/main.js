@@ -120,7 +120,7 @@
     onUpdate: (self) => header.classList.toggle('is-scrolled', self.scroll() > 20)
   });
   const navLinks = document.querySelectorAll('.nav-link');
-  ['inicio', 'tratamentos', 'horarios', 'endereco', 'contato'].forEach((id) => {
+  ['inicio', 'tratamentos', 'avaliacoes', 'horarios', 'endereco', 'contato'].forEach((id) => {
     const section = document.getElementById(id);
     if (!section) return;
     ScrollTrigger.create({
